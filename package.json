@@ -5,7 +5,11 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch --env-file=.env server.js"
+    "cleanup": "rimraf ./dist",
+    "prestart": "npm run cleanup && npx tsc",
+    "start": "node --env-file=.env ./dist/server.js",
+    "predev": "npm run cleanup",
+    "dev": "npx tsc -w & node --watch --env-file=.env ./dist/server.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +22,12 @@
   },
   "homepage": "https://github.com/fgantri/piper-classroom-api#readme",
   "dependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
     "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.2"
   }
 }
