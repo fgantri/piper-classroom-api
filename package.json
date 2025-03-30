@@ -1,0 +1,23 @@
+{
+  "name": "piper-classroom-api",
+  "version": "0.1.0",
+  "description": "An API for an online learning platform that integrates slideshow presentations, video lectures, and study notes, enhancing the e-learning experience.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file=.env server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fgantri/piper-classroom-api.git"
+  },
+  "author": "Fouad Gantri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fgantri/piper-classroom-api/issues"
+  },
+  "homepage": "https://github.com/fgantri/piper-classroom-api#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
