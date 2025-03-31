@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "An API for an online learning platform that integrates slideshow presentations, video lectures, and study notes, enhancing the e-learning experience.",
   "main": "server.js",
-  "type": "module",
   "scripts": {
+    "build": "npx tsc",
     "cleanup": "rimraf ./dist",
     "prestart": "npm run cleanup && npx tsc",
     "start": "node --env-file=.env ./dist/server.js",

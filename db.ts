@@ -77,8 +77,8 @@ async function initDB() {
   await connectToDatabase();
   if (process.env.PG_DB_MODE === "debug") {
     await dropTablesIfExist();
-    await createTablesIfNotExist();
   }
+  await createTablesIfNotExist();
 }
 
 initDB();
